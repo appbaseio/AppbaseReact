@@ -1,0 +1,8 @@
+{
+  "name": "AppbaseReact",
+  "dependencies": {
+    "appbase-js": "latest",
+    "bootstrap":"latest",
+    "react":"latest"
+  }
+}

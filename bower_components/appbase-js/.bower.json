@@ -1,0 +1,36 @@
+{
+  "name": "appbase-js",
+  "version": "0.8.1",
+  "homepage": "https://github.com/appbaseio/appbase-js",
+  "authors": [
+    "Sacheendra Talluri <sacheendra.t@gmail.com>"
+  ],
+  "description": "Appbase.io streaming client lib for Javascript",
+  "main": "browser/appbase.js",
+  "keywords": [
+    "elasticsearch",
+    "appbase",
+    "stream",
+    "data streams",
+    "search",
+    "websockets",
+    "appbase"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "_release": "0.8.1",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.8.1",
+    "commit": "59df6e4287d94dd874e2fcffeb40bb71924060cf"
+  },
+  "_source": "git://github.com/appbaseio/appbase-js.git",
+  "_target": "*",
+  "_originalSource": "appbase-js"
+}

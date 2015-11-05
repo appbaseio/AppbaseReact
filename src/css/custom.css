@@ -1,0 +1,16 @@
+#app{
+	margin-top: 20px;
+}
+.form-inline{
+	padding: 15px;
+    border: 1px solid #ddd;
+}
+.quote{
+	padding: 10px;
+    background: #f7f7f7;
+    border: 1px solid #ddd;
+    border-top: 0;
+}
+.btn-delete{
+	margin-left: 5px;
+}
