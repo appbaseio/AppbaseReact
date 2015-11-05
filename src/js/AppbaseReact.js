@@ -77,7 +77,7 @@ var AppbaseReact = {
         }
 
         function searchStream(object, response_var) {
-            streamingClient.readStream(object).on('data', function(res) {
+            streamingClient.searchStream(object).on('data', function(res) {
                 $this.setOutput(res, response_var);
             }).on('error', function(res) {
                 $this.setOutput(res, response_var);
