@@ -8,59 +8,40 @@ var Container = React.createClass({
     ....
 ```
 
-##  Connect with appbase
-To connect with appbase, you need to create AppbaseRef object, and then pass that object in **Connect** function
+##  bindArray
+To get streaming result in array, you can use this method, it will update you with new data and merging them in Array.
 ```
-var AppbaseRef = new Appbase({
-    url: 'https://scalr.api.appbase.io',
-    appname: appname,
-    username: username,
-    password: password
-});
-this.appbase().connect(AppbaseRef);
-```        
-## Read Document
- Read Document of any *type* with use of *search* method, and get the response in 2nd parameter variable
-```
-this.appbase().search(dataObject,"search_response");
-//Example of dataObject
-var dataObject = {
-   type: "tweet",
-      body: {
-        query: {
-          match_all: {}
-        }
+this.bindArray(searchQuery,'search_response');
+
+//here searchQuery is Appbase stream query
+//Example of searchquery
+var searchQuery = this.appbaseRef.searchStream({
+  type: "tweet",
+  body: {
+    query: {
+      match_all: {}
     }
-};
+  },
+  streamOnly:true
+});
 ```
 in this example you can access response data by using "this.state.search_response"
 
-## Write/Update Document
- Same way as Read Document, you can Write/Update document with use of *index* method, and get the response in 2nd parameter variable
+## bindObject
+ To get streaming result in object, you can use this method, it will always update you with new data.
 ```
-this.appbase().index(dataObject,"index_response");
-//Example of dataObject
-var dataObject = {
-   type: "tweet",
-      body: {
-        query: {
-          match_all: {}
-        }
+this.bindObject(searchQuery,'search_response');
+
+//here searchQuery is Appbase stream query
+//Example of searchquery
+var searchQuery = this.appbaseRef.searchStream({
+  type: "tweet",
+  body: {
+    query: {
+      match_all: {}
     }
-};
+  },
+  streamOnly:true
+});
 ```
-in this example you can access response data by using "this.state.index_response"
-
-## Delete Document
- Same way as Read Document, you can Delete document with use of *delete_doc* method, and get the response in 2nd parameter variable
-```
-this.appbase().delete_doc(dataObject,"delete_response");
-//Example of dataObject
-var dataObject ={
-    type:"tweet",
-    id:id
-};
-```
-in this example you can access response data by using "this.state.delete_response"
-
-> For more help with apis, [Visit Appbase Api](http://docs.appbase.io/scalr/javascript/api-reference.html)
+in this example you can access response data by using "this.state.search_response"
